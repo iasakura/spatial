@@ -15,8 +15,8 @@ switch $TARGET {
     # For 2017.4 or later?
     # set BOARD xilinx.com:zcu102:part0:3.1
     # set PART xczu9eg-ffvb1156-2-e
-    set BOARD xilinx.com:zcu102:part0:3.0
-    set PART xczu9eg-ffvb1156-2-i
+    set BOARD em.avnet.com:ultra96v2:part0:1.0
+    set PART xczu3eg-sbva484-1-e
   }
   default {
     puts "$TARGET" is not a valid target! Must either be 'ZC706' or 'Zedboard' or 'ZCU102'

@@ -100,4 +100,4 @@ report_ram_utilization -detail -file ./par_ram_utilization.rpt
 report_high_fanout_nets -ascending -timing -load_types -file ./par_high_fanout_nets.rpt
 
 #Export bitstream
-file copy -force ./project_1/project_1.runs/impl_1/design_1_wrapper.bit ./accel.bit
+file copy -force ./project_1/project_1.runs/impl_1/design_1.bit ./accel.bit

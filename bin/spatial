@@ -81,7 +81,7 @@ def getFullyQualifiedSourceName(app):
 
 
 def getFullyQualifiedClassName(app, errorIfNone):
-  path_cmd = "find ./ -name '" + app + ".class'"
+  path_cmd = "find ./test ./apps -name '" + app + ".class'"
   p = subprocess.Popen(path_cmd, stdout=subprocess.PIPE, shell=True)
   p.wait()
   paths = []
@@ -129,10 +129,10 @@ def main():
 
   (opts, args) = parser.parse_known_args()
 
-  ecode = os.system("sbt \"; project apps; compile\"")
-  if ecode != 0: exit(1)
-  ecode = os.system("sbt \"; project test; test:compile\"")
-  if ecode != 0: exit(1)
+  # ecode = os.system("sbt \"; project apps; compile\"")
+  # if ecode != 0: exit(1)
+  # ecode = os.system("sbt \"; project test; test:compile\"")
+  # if ecode != 0: exit(1)
 
   name, isTest, found = getFullyQualifiedClassName(app=opts.app, errorIfNone=True)
 

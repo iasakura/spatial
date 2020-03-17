@@ -1,6 +1,6 @@
 CC=g++
 LINK=g++
-CROSS_COMPILE=/usr/bin/aarch64-linux-gnu-
+CROSS_COMPILE=aarch64-linux-gnu-
 
 FRINGE_SRC=../zcu.sw-resources
 HOST_SRC=./
